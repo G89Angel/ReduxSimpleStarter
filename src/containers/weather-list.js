@@ -6,8 +6,8 @@ import _ from 'lodash';
 class WeatherList extends Component {
   renderWeather(cityData) {
     const name = cityData.city.name;
-    const temps =
-      _.map(cityData.list.map(weather => weather.main.temp), (temp) => temp - 273.15);
+    // const temps = _.map(cityData.list.map(weather => weather.main.temp), (temp) => temp - 273.15);
+    const temps = cityData.list.map(weather => weather.main.temp);
     const pressure = cityData.list.map(weather => weather.main.pressure);
     const humidity = cityData.list.map(weather => weather.main.humidity);
 
